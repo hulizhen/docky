@@ -15,7 +15,6 @@ $ docker run --name nginx \
         -v /home/hulz/projects/nginx/logs:/var/log/nginx \
         -p 80:80 \
         --restart always \
-        --rm \
         -d \
         hulz413/nginx
 ```

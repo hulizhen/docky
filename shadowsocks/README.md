@@ -1,12 +1,29 @@
-# Build
+# Shadowsocks
+
+## Build
 
 ```sh
 $ cd docky/shadowsocks
-$ docker build -t go-shadowsocks2 .
+$ docker build -t hulz413/shadowsocks .
 ```
 
-# Run
+## Push
+
+$ docker push hulz413/shadowsocks
+
+## Pull
 
 ```sh
-$ docker run -d --restart=always --name=shadowsocks -p 8388:8388 -e PASSWORD=123456 go-shadowsocks2:latest
+$ docker pull hulz413/shadowsocks
+```
+
+## Run
+
+```sh
+$ docker run -d \
+        --restart always \
+        --name=shadowsocks \
+        -p 8388:8388 \
+        -e PASSWORD=123456 \
+        hulz413/shadowsocks
 ```
